@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>CopyToClipboard</title>
+  </head>
+  <body>
+    <input type="text" name="" value="kwfbxwhfkxj" readonly="readonly" id="holder">
+    <div id="copyStatus" style="display: none">Copied to Clipboard</div>
+    <script type="text/javascript">
+      let holder = document.getElementById('holder');
+      holder.onclick = copyToClipboard;
+
+      function copyToClipboard(){
+        if(document.execCommand('copy')){
+          document.getElementById('copyStatus').style.display = '';
+
+          setTimeout(function(){
+            document.getElementById('copyStatus').style.display = 'none';
+          }, 3000);
+        }
+      }
+
+    </script>
+  </body>
+</html>
